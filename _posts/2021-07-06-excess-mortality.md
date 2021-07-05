@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Excess death"
+date: 2021-07-07 07:49:00 -0000
+categories: ExcessDeath Analysis
+
+---
+
 ExcessDeathCOVID19
 ================
 DHY
