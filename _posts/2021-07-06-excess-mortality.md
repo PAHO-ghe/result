@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Excess death"
-date: 2021-07-07 07:49:00 -0000
+date: 2021-07-07
 categories: ExcessDeath Analysis
 
 ---
