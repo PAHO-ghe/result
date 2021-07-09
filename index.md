@@ -1,4 +1,97 @@
-## COVID-19 impact on HIA
+# COVID-19 impact on HIA
+
+## Background 
+
+## Method 
+### Set environement 
+```markdown
+import os
+import warnings
+warnings.filterwarnings('ignore')
+import sys
+import csv 
+import pandas as pd
+import numpy as np
+
+import matplotlib.pyplot as plt
+%matplotlib inline  
+from matplotlib import style
+style.use("ggplot")
+
+import seaborn as sns; sns.set()
+import datetime
+from datetime import datetime
+
+from sklearn import metrics
+from sklearn.cluster import KMeans
+
+import pylab as pl
+```
+
+
+### Target: Set output as Excess death with COVID19 
+```markdown
+
+```
+### Data : Distribution and correlation 
+```markdown
+
+```
+
+### Model 
+#### Cluster size 
+```markdown
+
+```
+
+#### Number of countries in each clusters 
+```markdown
+
+```
+
+#### Define KNN model and test scenarios of K=2 and K=3
+```markdown
+
+```
+
+##### UHC coverage index mean value per cluster
+```markdown
+
+```
+
+##### UHC indicators per cluster 
+```markdown
+
+```
+
+
+## Result
+### Distribution of COVID19 impact score between clusters
+```markdown
+
+```
+
+### Distribution patter on all GHE and UHC scores impact on high/low COVID19 impact 
+```markdown
+
+```
+
+### Pattern of UHC scores in 2019 amonghighly impacted countries by COVID 19 at 2020 
+```markdown
+
+```
+
+### Indicator pattern in countries with less impacted by covid19 
+```markdown
+
+```
+
+## Conclusion 
+
+
+
+
+
 
 You can use the [editor on GitHub](https://github.com/PAHO-ghe/result/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
