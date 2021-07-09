@@ -4,7 +4,7 @@
 
 ## Method 
 ### Set environement 
-```markdown
+```python
 import os
 import warnings
 warnings.filterwarnings('ignore')
