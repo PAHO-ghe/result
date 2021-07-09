@@ -154,6 +154,8 @@ plt.show()
 
 
 ```
+![graph1](https://user-images.githubusercontent.com/81782228/125119701-53cbf300-e0a6-11eb-9e87-fc5af95ad40d.png)
+
 There are several relations between indicators and GHE causes with high correlation to each others however, none of them shows strong correlation (>0.6) with COVID19 induced death percentage per population.
 
 ```python
