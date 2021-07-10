@@ -188,7 +188,7 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 
 
 #### Define KNN model and test scenarios of K=2 and K=3
-When K=3 : 
+**When K=3 :**
 ![Screen Shot 2021-07-09 at 10 01 37 PM](https://user-images.githubusercontent.com/81782228/125152430-4e4fc680-e101-11eb-90c7-9f798c388cee.png)
 
 ##### UHC coverage index mean value per cluster
@@ -201,7 +201,7 @@ When K=3 :
 
 
 
-When K=2 : 
+**When K=2 :**
 
 ##### UHC coverage index mean value per cluster
 ![Screen Shot 2021-07-09 at 10 06 44 PM](https://user-images.githubusercontent.com/81782228/125152534-f5346280-e101-11eb-82fc-248be8c0b784.png)
@@ -211,6 +211,8 @@ When K=2 :
 
 ![download (1)](https://user-images.githubusercontent.com/81782228/125152579-33318680-e102-11eb-9c72-82dfa6a1c601.png)
 
+https://github.com/PAHO-ghe/result/blob/gh-page/_includes/clustergraphinteractive.html
+{% includes/clustergraphinteractive.html %}
 
 ## Result
 ### Distribution of COVID19 impact score between clusters
@@ -239,6 +241,14 @@ When K=2 :
 
 
 
+
+
+
+
+
+
+
+#========================================================================================
 
 You can use the [editor on GitHub](https://github.com/PAHO-ghe/result/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
