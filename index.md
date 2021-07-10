@@ -189,17 +189,27 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 
 #### Define KNN model and test scenarios of K=2 and K=3
 When K=3 : 
-
+![Screen Shot 2021-07-09 at 10 01 37 PM](https://user-images.githubusercontent.com/81782228/125152430-4e4fc680-e101-11eb-90c7-9f798c388cee.png)
 
 ##### UHC coverage index mean value per cluster
-```markdown
-
-```
+![Screen Shot 2021-07-09 at 10 04 08 PM](https://user-images.githubusercontent.com/81782228/125152466-97a01600-e101-11eb-8dca-f6f853daba92.png)
 
 ##### UHC indicators per cluster 
-```markdown
+![Screen Shot 2021-07-09 at 10 03 21 PM](https://user-images.githubusercontent.com/81782228/125152449-7b9c7480-e101-11eb-9610-f931d5aa332d.png)
 
-```
+![download](https://user-images.githubusercontent.com/81782228/125152485-b43c4e00-e101-11eb-80cc-a62cc44198a5.png)
+
+
+
+When K=2 : 
+
+##### UHC coverage index mean value per cluster
+![Screen Shot 2021-07-09 at 10 06 44 PM](https://user-images.githubusercontent.com/81782228/125152534-f5346280-e101-11eb-82fc-248be8c0b784.png)
+##### UHC indicators per cluster 
+![Screen Shot 2021-07-09 at 10 08 00 PM](https://user-images.githubusercontent.com/81782228/125152571-22811080-e102-11eb-83cc-f332b631e460.png)
+
+
+![download (1)](https://user-images.githubusercontent.com/81782228/125152579-33318680-e102-11eb-9c72-82dfa6a1c601.png)
 
 
 ## Result
