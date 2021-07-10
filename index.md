@@ -164,21 +164,23 @@ df_highcorr=pd.DataFrame(corr_all[targetoutput])
 corr_out=df_highcorr.round(2).head(len(df_highcorr))
 corr_out.sort_values(by=targetoutput)
 ```
+![Screen Shot 2021-07-09 at 11 12 43 AM](https://user-images.githubusercontent.com/81782228/125119962-a60d1400-e0a6-11eb-96d2-1771da282aad.png)
 
 
 ### Model 
 KNN model computes relation to all indicators in the model and return unsupervised classification result of those indicator's as in format of clusters. In the analysis, the ML model computes distance of each possible combinations of UHC indicators and identify hidden patterns of class. Further details of model validation and result follows as below:
 #### Cluster size 
 Get SSE to check optimal cluster size
-```python
+![sse](https://user-images.githubusercontent.com/81782228/125120152-eec4cd00-e0a6-11eb-90bc-908c2e4c51ca.png)
 
-
-```
 Based on SSE check among clusters sized from 2 to 15, the optimal size of cluster is either 2 or 3 with its delta ibiggest among all tested intervals. The pattern is also observed in the above graph with kinked point at where k=2 and k=3.
 
 
 #### Number of countries in each clusters 
 
+![graph4](https://user-images.githubusercontent.com/81782228/125120282-174cc700-e0a7-11eb-85db-a4ae125a607f.png)
+![graph4-1](https://user-images.githubusercontent.com/81782228/125120315-26cc1000-e0a7-11eb-8825-145392bc64f2.png)
+![graph4-2](https://user-images.githubusercontent.com/81782228/125120327-292e6a00-e0a7-11eb-8075-c7cd983961e7.png)
 
 As in process to further validation of the cluster sanity, balance between clusters have checked. Balance between the cluster means how many number of samples allocated in each clusters. When the ML model built a model with 2 clusters, its balabce was xx% and xx% where the majority of case (xx%) were allocated in single cluster. Next ML model was built on k=3 scenario, where all countries are distributed into three clusters with balance of xx%, xx%, and 20%. However, final decision on what # of clusters to use for the analysis should be decided by how the target index is distributed per cluster. Therefore, the analysis will be done for both k=3 and k=2 scenario.
 
@@ -186,9 +188,8 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 
 
 #### Define KNN model and test scenarios of K=2 and K=3
-```markdown
+When K=3 : 
 
-```
 
 ##### UHC coverage index mean value per cluster
 ```markdown
