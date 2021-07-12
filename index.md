@@ -2,6 +2,7 @@
 
 ## Background 
 
+
 ## Method 
 
 In the study, focus of impact measure is seleted as below among the UHC indicators with previosuly reported COVID19 relation
@@ -29,6 +30,9 @@ The ART indicator uses crude coverage of ART among people living with HIV. So a 
 
 The LRI coverage score can be compared across countries, but not across indicators within a given country, since the LRI coverage scores are scaled across countries. So we can compare Mexico’s LRI coverage score to Peru’s LRI coverage score, but we cannot compare LRI and ART treatment within Mexico.
 Further details to explain the indicators can be found from Part 2, Section 2 of the reference paper (https://www.thelancet.com/cms/10.1016/S0140-6736(20)30750-9/attachment/7b01f380-587a-49d3-aae2-b6ea93898367/mmc1.pdf)
+
+### ICD 10 codes on UHC indicators
+Coming up. 
 
 ### Set environement 
 ```python
@@ -188,7 +192,6 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 
 
 #### Define KNN model and test scenarios of K=2 and K=3
-**When K=3 : **
 
 ##### UHC coverage index mean value per cluster
 ![Screen Shot 2021-07-09 at 10 04 08 PM](https://user-images.githubusercontent.com/81782228/125152466-97a01600-e101-11eb-8dca-f6f853daba92.png)
