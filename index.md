@@ -194,7 +194,6 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 #### Define KNN model and test scenarios of K=2 and K=3
 
 ##### UHC coverage index mean value per cluster
-![Screen Shot 2021-07-09 at 10 04 08 PM](https://user-images.githubusercontent.com/81782228/125152466-97a01600-e101-11eb-8dca-f6f853daba92.png)
 
 | Cluster label      | Mean COVID19 impact as in excess death ratio (K=2) |Mean COVID19 impact as in excess death ratio (K=3) |
 | ----------- | ----------- | ----------- |
@@ -210,18 +209,16 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 ![download](https://user-images.githubusercontent.com/81782228/125319211-2aa69f00-e300-11eb-86c9-665136f34b94.png)
 ![download (1)](https://user-images.githubusercontent.com/81782228/125319461-65a8d280-e300-11eb-816e-032b8e6ecef9.png)
 
-
+Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 ## Result
 ### Distribution of COVID19 impact score between clusters
 ![download (3)](https://user-images.githubusercontent.com/81782228/125319974-e071ed80-e300-11eb-929c-e9dbbf2e15ec.png)
-
+Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 
 ### Pattern of UHC scores impact on high/low COVID19 impact 
 ![download (4)](https://user-images.githubusercontent.com/81782228/125320678-90475b00-e301-11eb-84a1-2c442e0bca43.png)
 ![download (5)](https://user-images.githubusercontent.com/81782228/125322782-be2d9f00-e303-11eb-8dc8-ed8b35398e0f.png)
-
-
-```
+Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 
 ## Conclusion 
 
