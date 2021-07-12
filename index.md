@@ -188,51 +188,35 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 
 
 #### Define KNN model and test scenarios of K=2 and K=3
-**When K=3 :**
-![Screen Shot 2021-07-09 at 10 01 37 PM](https://user-images.githubusercontent.com/81782228/125152430-4e4fc680-e101-11eb-90c7-9f798c388cee.png)
+**When K=3 : **
 
 ##### UHC coverage index mean value per cluster
 ![Screen Shot 2021-07-09 at 10 04 08 PM](https://user-images.githubusercontent.com/81782228/125152466-97a01600-e101-11eb-8dca-f6f853daba92.png)
 
+| Cluster label      | Mean COVID19 impact as in excess death ratio (K=2) |Mean COVID19 impact as in excess death ratio (K=3) |
+| ----------- | ----------- | ----------- |
+| 0      | 3.7      | 4.2|
+| 1   | 6.6        |7.1 |
+| 2   |-        |3.2|
+
+
 ##### UHC indicators per cluster 
 ![Screen Shot 2021-07-09 at 10 03 21 PM](https://user-images.githubusercontent.com/81782228/125152449-7b9c7480-e101-11eb-9610-f931d5aa332d.png)
-
-![download](https://user-images.githubusercontent.com/81782228/125152485-b43c4e00-e101-11eb-80cc-a62cc44198a5.png)
-
-
-
-**When K=2 :**
-
-##### UHC coverage index mean value per cluster
-![Screen Shot 2021-07-09 at 10 06 44 PM](https://user-images.githubusercontent.com/81782228/125152534-f5346280-e101-11eb-82fc-248be8c0b784.png)
-##### UHC indicators per cluster 
 ![Screen Shot 2021-07-09 at 10 08 00 PM](https://user-images.githubusercontent.com/81782228/125152571-22811080-e102-11eb-83cc-f332b631e460.png)
 
+![download](https://user-images.githubusercontent.com/81782228/125319211-2aa69f00-e300-11eb-86c9-665136f34b94.png)
+![download (1)](https://user-images.githubusercontent.com/81782228/125319461-65a8d280-e300-11eb-816e-032b8e6ecef9.png)
 
-![download (1)](https://user-images.githubusercontent.com/81782228/125152579-33318680-e102-11eb-9c72-82dfa6a1c601.png)
-
-https://github.com/PAHO-ghe/result/blob/gh-page/_includes/clustergraphinteractive.html
-{% include clustergraphinteractive.html %}
-{% include example_plot.html %}
 
 ## Result
 ### Distribution of COVID19 impact score between clusters
-```markdown
+![download (3)](https://user-images.githubusercontent.com/81782228/125319974-e071ed80-e300-11eb-929c-e9dbbf2e15ec.png)
 
-```
 
-### Distribution patter on all GHE and UHC scores impact on high/low COVID19 impact 
-```markdown
+### Pattern of UHC scores impact on high/low COVID19 impact 
+![download (4)](https://user-images.githubusercontent.com/81782228/125320678-90475b00-e301-11eb-84a1-2c442e0bca43.png)
+![download (5)](https://user-images.githubusercontent.com/81782228/125322782-be2d9f00-e303-11eb-8dc8-ed8b35398e0f.png)
 
-```
-
-### Pattern of UHC scores in 2019 amonghighly impacted countries by COVID 19 at 2020 
-```markdown
-
-```
-
-### Indicator pattern in countries with less impacted by covid19 
-```markdown
 
 ```
 
