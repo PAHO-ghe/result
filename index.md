@@ -213,6 +213,7 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 
 https://github.com/PAHO-ghe/result/blob/gh-page/_includes/clustergraphinteractive.html
 {% include clustergraphinteractive.html %}
+{% include example_plot.html %}
 
 ## Result
 ### Distribution of COVID19 impact score between clusters
