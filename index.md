@@ -217,10 +217,14 @@ Graph description goes here. Graph description goes here. Graph description goes
 
 ### Pattern of UHC scores impact on high/low COVID19 impact 
 ![download (4)](https://user-images.githubusercontent.com/81782228/125320678-90475b00-e301-11eb-84a1-2c442e0bca43.png)
+Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
+
+
 ![download (5)](https://user-images.githubusercontent.com/81782228/125322782-be2d9f00-e303-11eb-8dc8-ed8b35398e0f.png)
 Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 
 ## Conclusion 
+Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. 
 
 
 
@@ -233,12 +237,6 @@ Graph description goes here. Graph description goes here. Graph description goes
 
 
 
-
-### housekeeping matters
-[editor on GitHub](https://github.com/PAHO-ghe/result/edit/gh-pages/index.md) 
-```markdown
-**Bold** and _Italic_ and `Code` text
-[Link](url) and ![Image](src)
-```
-layout and styles from the Jekyll theme  [repository settings](https://github.com/PAHO-ghe/result/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+###### housekeeping matters
+[editor on GitHub](https://github.com/PAHO-ghe/result/edit/gh-pages/index.md) layout and styles from the Jekyll theme  [repository settings](https://github.com/PAHO-ghe/result/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
