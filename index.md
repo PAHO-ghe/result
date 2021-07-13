@@ -275,8 +275,8 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 
 Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 ## Result
-### Distribution of COVID19 impact score between clusters
-![download (3)](https://user-images.githubusercontent.com/81782228/125319974-e071ed80-e300-11eb-929c-e9dbbf2e15ec.png)
+### UHC score distribution across countries
+![download (3)](https://user-images.githubusercontent.com/81782228/125536902-dc82a36b-23fa-418d-991e-02e6d16b8c97.png)
 Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 
 ### Pattern of UHC scores impact on high/low COVID19 impact 
