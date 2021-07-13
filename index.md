@@ -258,18 +258,19 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 |0							| 	|   Grenada, Barbados, Saint Lucia, Suriname|
 
 ![download (1)](https://user-images.githubusercontent.com/81782228/125319461-65a8d280-e300-11eb-816e-032b8e6ecef9.png)
-|             | High score cluster| Mid score cluster|Low score cluster|
-| ----------- | -----------       | -----------       |----------- |
-|9							| Chile, Panama, Peru, USA	|   |  |
-|8							| 	|  Bolivia (Plurinational State Of) |  Argentina, Ecuador|
-|7							| 	Canada, Colombia|   |  Brazil|
-|6							| 	| Belize, Honduras  |  Paraguay|
-|5							| Cuba	| Dominican Republic  |  Nicaragua|
-|4							| 	|  Guyana, Haiti |  Venezuela (Bolivarian Republic of)|
-|3							| 	|   Guatemala|  Jamaica, Mexico|
-|2							| Costa Rica	| Saint Vincent and the Grenadines  |  Uruguay|
-|1							| 	|   |  Antigua and Barbuda, Bahanas, Trinidad and Tobago|
-|0							| 	|   Suriname|  Barbados, Grenada, Saint Lucia|
+
+|               | High score cluster| Mid score cluster                  |Low score cluster|
+| -----------   | -----------       | -----------                        |----------- |
+|9							| Chile, Panama, Peru, USA	|                            |              |
+|8							| 	                |  Bolivia (Plurinational State Of)  |  Argentina, Ecuador|
+|7							| 	Canada, Colombia|                                     |  Brazil|
+|6							| 	                | Belize, Honduras                     |  Paraguay|
+|5							| Cuba	            | Dominican Republic                   |  Nicaragua|
+|4							| 	                |  Guyana, Haiti                      |  Venezuela (Bolivarian Republic of)|
+|3							| 	                |   Guatemala                         |  Jamaica, Mexico|
+|2							| Costa Rica	      | Saint Vincent and the Grenadines     |  Uruguay|
+|1							| 	                |                                      |  Antigua and Barbuda, Bahanas, Trinidad and Tobago|
+|0							| 	                |   Suriname                            |  Barbados, Grenada, Saint Lucia|
 
 
 Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
