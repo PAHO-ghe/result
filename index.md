@@ -1,7 +1,7 @@
 # COVID-19 impact on HIA
 
 ## Background 
-
+COVID19 impact is measured in excess death in PAHO region using K-nearest neighbor method by machine learning. Impact of COVID19 is categorized by 13 UHC indicators.
 
 ## Method 
 
@@ -202,12 +202,75 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 | 2   |-        |3.2|
 
 
-##### UHC indicators per cluster 
-![Screen Shot 2021-07-09 at 10 03 21 PM](https://user-images.githubusercontent.com/81782228/125152449-7b9c7480-e101-11eb-9610-f931d5aa332d.png)
-![Screen Shot 2021-07-09 at 10 08 00 PM](https://user-images.githubusercontent.com/81782228/125152571-22811080-e102-11eb-83cc-f332b631e460.png)
+##### UHC indicator mean per cluster 
+
+| Cluster label      | Cluster 0 | Cluster 1 |Cluster 2 |
+| ----------- | ----------- | ----------- |----------- |	
+|ART	|63.2	|78.4|	65.8|
+|Acute lymphoid leukaemia	|8.8	|49.3	|20.7|
+|Asthma	|48.0	|78.6|	68.0|
+|Breast cancer	|55.5|	87.4	|73.0|
+|CKD	|14.1	|50.9|	25.8|
+|COPD	|52.7|	78.4|	66.2|
+|Cervical cancer	|43.9	|76.6|	60.0|
+|Colon/rectum cancer	|40.2|	82.3|	59.7|
+|Diabetes	|35.8	|75.0	|40.4|
+|IHD	|46.4|	81.6|	68.5|
+|LRI	|82.7	|96.1|	92.8|
+|Stroke	|41.0	|83.3|	60.4|
+|TB	|65.8	|85.9|	81.9|
+|Uterine cancer	|48.7	|86.3|	69.4|
+
+
+
+
+| Cluster label      | Cluster 0 | Cluster 1 |
+| ----------- | ----------- | ----------- |
+|ART							|64.8	|77.0|
+|Acute lymphoid leukaemia	|15.3	|48.0|
+|Asthma						|60.4	|76.9|
+|Breast cancer				|66.4	|85.2|
+|CKD						|	20.3|	50.4|
+|COPD						|60.8	|77.4|
+|Cervical cancer			|	53.2|	76.1|
+|Colon/rectum cancer		|	52.2|	79.6|
+|Diabetes					|37.9	|72.9}
+|IHD						|	58.9|	82.5|
+|LRI						|	88.6|	96.2|
+|Stroke						|52.8	|80.8|
+|TB							|75.2	|86.4|
+|Uterine cancer				|61.1	|84.9|
+
 
 ![download](https://user-images.githubusercontent.com/81782228/125319211-2aa69f00-e300-11eb-86c9-665136f34b94.png)
+
+|             | High score cluster| Low score cluster|
+| ----------- | -----------       | ----------- |
+|9							| 	Chile, Panama, Peru, USA|   |
+|8							| 	|   Argentina, Bolivia (Plurinational state of), Ecuador|
+|7							| 	Canada, Colombia|   Brazil|
+|6							| 	|   Paraguary, Belize, Honduras|
+|5							| 	Cuba, |   Nicaragua, Domunical Republic|
+|4							| 	|   Guyana, Haiti, Venezuela (Bolivarian Republic of)|
+|3							| 	|  Guatemala, Jamaica, Mexico |
+|2							| 	Costa Rica, Uruguay|   Saint Vincent and the Grenadines|
+|1							| 	|   Bahamas, Trinidad and Tobago, Antigua and Barbuda|
+|0							| 	|   Grenada, Barbados, Saint Lucia, Suriname|
+
 ![download (1)](https://user-images.githubusercontent.com/81782228/125319461-65a8d280-e300-11eb-816e-032b8e6ecef9.png)
+|             | High score cluster| Mid score cluster|Low score cluster|
+| ----------- | -----------       | -----------       |----------- |
+|9							| Chile, Panama, Peru, USA	|   |  |
+|8							| 	|  Bolivia (Plurinational State Of) |  Argentina, Ecuador|
+|7							| 	Canada, Colombia|   |  Brazil|
+|6							| 	| Belize, Honduras  |  Paraguay|
+|5							| Cuba	| Dominican Republic  |  Nicaragua|
+|4							| 	|  Guyana, Haiti |  Venezuela (Bolivarian Republic of)|
+|3							| 	|   Guatemala|  Jamaica, Mexico|
+|2							| Costa Rica	| Saint Vincent and the Grenadines  |  Uruguay|
+|1							| 	|   |  Antigua and Barbuda, Bahanas, Trinidad and Tobago|
+|0							| 	|   Suriname|  Barbados, Grenada, Saint Lucia|
+
 
 Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 ## Result
