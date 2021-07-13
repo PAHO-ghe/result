@@ -257,7 +257,7 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 |1							| 	|   Bahamas, Trinidad and Tobago, Antigua and Barbuda|
 |0							| 	|   Grenada, Barbados, Saint Lucia, Suriname|
 
-![download (1)](https://user-images.githubusercontent.com/81782228/125497643-ee4c2911-2bb4-4603-9e2f-388d279e8a82.png)
+![download (2)](https://user-images.githubusercontent.com/81782228/125497901-780b24d4-bb06-407a-8137-75329ec81649.png)
 
 |   Decile rank            | High score cluster| Mid score cluster                  |Low score cluster|
 | -----------   | -----------       | -----------                        |----------- |
