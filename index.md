@@ -242,9 +242,9 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 |Uterine cancer				|61.1	|84.9|
 
 
-![download](https://user-images.githubusercontent.com/81782228/125319211-2aa69f00-e300-11eb-86c9-665136f34b94.png)
+![download](https://user-images.githubusercontent.com/81782228/125497587-bd77dcdd-50ec-4783-8faa-6a113502ef60.png)
 
-|             | High score cluster| Low score cluster|
+|   Decile rank          | High score cluster| Low score cluster|
 | ----------- | -----------       | ----------- |
 |9							| 	Chile, Panama, Peru, USA|   |
 |8							| 	|   Argentina, Bolivia (Plurinational state of), Ecuador|
@@ -257,9 +257,9 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 |1							| 	|   Bahamas, Trinidad and Tobago, Antigua and Barbuda|
 |0							| 	|   Grenada, Barbados, Saint Lucia, Suriname|
 
-![download (1)](https://user-images.githubusercontent.com/81782228/125319461-65a8d280-e300-11eb-816e-032b8e6ecef9.png)
+![download (1)](https://user-images.githubusercontent.com/81782228/125497643-ee4c2911-2bb4-4603-9e2f-388d279e8a82.png)
 
-|               | High score cluster| Mid score cluster                  |Low score cluster|
+|   Decile rank            | High score cluster| Mid score cluster                  |Low score cluster|
 | -----------   | -----------       | -----------                        |----------- |
 |9							| Chile, Panama, Peru, USA	|                            |              |
 |8							| 	                |  Bolivia (Plurinational State Of)  |  Argentina, Ecuador|
