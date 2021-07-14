@@ -280,7 +280,8 @@ Graph description goes here. Graph description goes here. Graph description goes
 Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 
 ### Pattern of UHC scores impact on high/low COVID19 impact 
-![download (4)](https://user-images.githubusercontent.com/81782228/125320678-90475b00-e301-11eb-84a1-2c442e0bca43.png)
+![download (4)](https://user-images.githubusercontent.com/81782228/125653160-95e5e1a3-cfd1-4e41-b0f4-92b5d1edcdb0.png)
+![download (5)](https://user-images.githubusercontent.com/81782228/125653738-1a9996eb-9691-4ecb-817b-6b4ccfe4c8e0.png)
 Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
 
 
