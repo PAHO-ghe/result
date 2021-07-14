@@ -32,7 +32,28 @@ The LRI coverage score can be compared across countries, but not across indicato
 Further details to explain the indicators can be found from Part 2, Section 2 of the reference paper (https://www.thelancet.com/cms/10.1016/S0140-6736(20)30750-9/attachment/7b01f380-587a-49d3-aae2-b6ea93898367/mmc1.pdf)
 
 ### ICD 10 codes on UHC indicators
-Coming up. 
+
+|	UHC ECI indicator	|	ICD10	|
+-----------	-----------	|	-----------	|
+|	Acute lymphoid leukemia treatment	|	C91.0-C91.02, C91.2-C91.32, C91.6-C91.62	|
+|	Asthma treatment	|	J45-J46.0, Z82.5	|
+|	ART coverage	|	B20-B23.8, B24-B24.0, B97.81, C46-C46.52, C46.7-C46.9, F02.4, O98.7-O98.73, Z11.4, Z20.6, Z21, Z83.0	|
+|	Breast cancer treatment	|	C50-C50.629, C50.8-C50.929, Z12.3-Z12.39, Z80.3, Z85.3, Z86.000	|
+|	COPD treatment	|	J41-J42.4, J43-J44.9	|
+|	Colon and rectum cancer treatment	|	C18-C19.0, C20, C21-C21.8, Z12.1-Z12.13, Z85.03-Z85.048, Z86.010	|
+|	Cervical cancer teratmnnt	|	C53-C53.9, Z12.4, Z85.41	|
+|	Diabetes treatment	|	E08-E08.11, E08.3-E08.9, E10-E10.11, E10.3-E11.1, E11.3-E12.1, E12.3-E13.11, E13.3-E14.1, E14.3-E14.9, R73-R73.9, Z13.1, Z83.3	|
+|	IHD treatment	|	I20-I21.6, I21.9-I25.9, Z82.4-Z82.49	|
+|	LRI treatment	|	A48.1, A70, B96.0-B96.1, B97.21, B97.4-B97.6, J09-J18.2, J18.8-J18.9, J19.6-J22.9, J85.1, J91.0, P23-P23.9, U04                         -U04.9, Z25.1	|
+|	Stroke treatment	|	G45-G46.8, I60-I62, I62.9-I64, I64.1, I65-I69.998, Z82.3	|
+|	TB treatment	|	A10-A14, A15    -A18.89, A19-A19.9, B90-B90.9, K67.3, K93.0, M49.0, N74.0-N74.1, P37.0, U84.3, Z03.0, Z11.1, Z20.1, Z23.2	|
+|	Uterine cancer treatment	|	C54-C54.3, C54.8-C54.9, Z85.42, Z86.001	|
+
+
+![image](https://user-images.githubusercontent.com/81782228/125662690-dd85cf9e-dba0-4cd6-b0d1-03468a216203.png)
+
+
+
 
 ### Set environement 
 ```python
