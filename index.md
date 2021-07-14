@@ -50,9 +50,6 @@ Further details to explain the indicators can be found from Part 2, Section 2 of
 |	Uterine cancer treatment	|	C54-C54.3, C54.8-C54.9, Z85.42, Z86.001	|
 
 
-![image](https://user-images.githubusercontent.com/81782228/125662690-dd85cf9e-dba0-4cd6-b0d1-03468a216203.png)
-
-
 
 
 ### Set environement 
