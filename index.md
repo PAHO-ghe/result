@@ -1,12 +1,11 @@
 # COVID-19 impact on HIA
 
 ## Background 
-COVID19 impact is measured in excess death in PAHO region using K-nearest neighbor method by machine learning. Impact of COVID19 is categorized by 13 UHC indicators.
+Impact of COVID19 is measured in Americas. Impact is expressed in size of excess death by COVDI19 at year 2020 in PAHO region. For the analysis K-nearest neighbor based unsupervised classification method was used by machine learning. The impact of COVID19 is evaluated by fourteen UHC indicator categories.
 
 ## Method 
 
-In the study, focus of impact measure is seleted as below among the UHC indicators with previosuly reported COVID19 relation
-
+In the study, focus of impact measure is categorized as below fourteen areas, which is among the UHC indicators developed by IHME.
 - Acute lymphoid leukemia treatment
 - Asthma treatment
 - Art coverage (Other immunosuppresive conditions such as HIV)
@@ -21,10 +20,6 @@ In the study, focus of impact measure is seleted as below among the UHC indicato
 - TB treatment
 - Utherine cancer treatment
 
- The ICD codes is pulled from IHME’s Global Health Data Exchange (http://ghdx.healthdata.org/record/ihme-data/gbd-2019-cause-icd-code-mappings) and refer to ICD codes used for the different causes of death and disability for the GBD 2019 study. Below table lists the ICD codes associated with all of the different causes of death and disability included in the UHC effective coverage index and therefore the ICD codes associated with each indicator.
-
-For each indicator, there are two components, 1) the coverage and 2) the weight. Taking the ART coverage indicator as an example, the coverage is crude coverage of ART among people living with HIV and the weight is the total potential health gain of the ART coverage intervention in each country-year. One of the inputs to the weight is the disability adjusted life-years due to HIV/AIDS. GBD 2019 estimates are the inputs to the UHC effective coverage index. Full description of index : (https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30750-9/fulltext)
-
 
 Each of UHC indicators can be interprete in the following example: 
 A score of 80 in a given country-year reflects a relatively low LRI case-fatality and a score of 10 in a given country-year reflects a relatively high LRI case-fatality when compared to LRI case-fatality ratios observed in all other country-years.
@@ -33,9 +28,12 @@ Coverage of the LRI indicator is calculated using a mortality-incidence ratio (w
 The ART indicator uses crude coverage of ART among people living with HIV. So a score of 80 in a given country-year means that we estimate that 80% of people living with HIV are on ART in that country-year. There are four indicators in the index that use crude coverage for the coverage component (both of the vaccine coverage indicators, ART coverage, and met demand for family planning).
 
 The LRI coverage score can be compared across countries, but not across indicators within a given country, since the LRI coverage scores are scaled across countries. So we can compare Mexico’s LRI coverage score to Peru’s LRI coverage score, but we cannot compare LRI and ART treatment within Mexico.
-Further details to explain the indicators can be found from Part 2, Section 2 of the reference paper (https://www.thelancet.com/cms/10.1016/S0140-6736(20)30750-9/attachment/7b01f380-587a-49d3-aae2-b6ea93898367/mmc1.pdf)
+Further details to explain the indicators can be found from Part 2, Section 2 of the reference paper [lancet paper link](https://www.thelancet.com/cms/10.1016/S0140-6736(20)30750-9/attachment/7b01f380-587a-49d3-aae2-b6ea93898367/mmc1.pdf)
 
 ### ICD 10 codes on UHC indicators
+ The ICD codes is pulled from IHME’s Global Health Data Exchange (http://ghdx.healthdata.org/record/ihme-data/gbd-2019-cause-icd-code-mappings) and refer to ICD codes used for the different causes of death and disability for the GBD 2019 study. Below table lists the ICD codes associated with all of the different causes of death and disability included in the UHC effective coverage index and therefore the ICD codes associated with each indicator.
+ For each indicator, there are two components, 1) the coverage and 2) the weight. Taking the ART coverage indicator as an example, the coverage is crude coverage of ART among people living with HIV and the weight is the total potential health gain of the ART coverage intervention in each country-year. One of the inputs to the weight is the disability adjusted life-years due to HIV/AIDS. GBD 2019 estimates are the inputs to the UHC effective coverage index. Full description of index : [lancet2 paper link](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30750-9/fulltext)
+
 
 |	UHC ECI indicator					|	ICD10	|
 | ------------------------------------- | ----------- |
@@ -89,7 +87,7 @@ df_index.isnull().sum()
 df_index.columns
 
 # EDA 
-df_index['indicator_marker'] = np.where(df_index['indicator'] == 'ExcessDeathRatio', 'target',
+df_index['indicator_marker'] = np.where(df_index['indicator'] == 'ExcessDeathRatio', 'target',     
                                np.where(df_index['indicator'].str.contains('0'), 'GHE', 'UHC'))
 df_index = df_index[(df_index['indicator_marker'] != 'GHE')] # drop all GHE indicators   
 df_index = df_index[(df_index['year'] == 2020) | (df_index['year'] == 2019)] # trim dataset to only include 2019 and 2020 for analysis 
@@ -121,7 +119,7 @@ df=df.dropna()
 ```
 
 
-### Target: Set output as Excess death with COVID19 
+### Set target: Excess death by COVID-19 in year 2020
 ```python
 targetoutput='ExcessDeathRatio'
 df_original=df #Use this to display final outcome
@@ -142,7 +140,7 @@ df_original['ExcessDeathRatio'] = pd.qcut(df_original[targetoutput], 10,labels =
 df=df_original
 
 ```
-### Data : Distribution and correlation 
+### Data correlation
 ```python
 df_UHCExc=df_UHCExc.pivot(index='country', columns='indicator',values='value') #Correlation between UHC coverage index and Excess death ratio
 column_1 = df_UHCExc["ExcessDeathRatio"]
@@ -175,12 +173,10 @@ annot = [[f"{val:.2f}"
 heatmap = sns.heatmap(corr, vmin=0, vmax=1, annot=annot, fmt='', cmap='coolwarm',linewidths=1.0)
 heatmap.set_title('Triangle Correlation Heatmap', fontdict={'fontsize': 18}, pad=16)
 plt.show()
-
-
 ```
 ![graph1](https://user-images.githubusercontent.com/81782228/125119701-53cbf300-e0a6-11eb-9e87-fc5af95ad40d.png)
 
-There are several relations between indicators and GHE causes with high correlation to each others however, none of them shows strong correlation (>0.6) with COVID19 induced death percentage per population.
+There are several indicators (CKD, Cervical cancer, Uterine cancer, Colon/rectum cancer, Breast cancer, with high correlation (>0.85*) to each others however, none of them shows significant strong correlation with COVID19 induced excess death as below table. 
 
 ```python
 corr_all=df.corr()
@@ -188,43 +184,100 @@ df_highcorr=pd.DataFrame(corr_all[targetoutput])
 corr_out=df_highcorr.round(2).head(len(df_highcorr))
 corr_out.sort_values(by=targetoutput)
 ```
-![Screen Shot 2021-07-09 at 11 12 43 AM](https://user-images.githubusercontent.com/81782228/125119962-a60d1400-e0a6-11eb-96d2-1771da282aad.png)
+
+| Indicator  | Correlation coefficient to excess death rate |
+| ----------- | ----------- | 
+| TB     | -0.01     | 
+| ART   | 0.02       |
+| LRI   |0.10       |
+| COPD   |0.13       |
+|    Breast cancer |     0.18   |
+|   CKD  |       0.24 |
+|   Cervical cancer  |       0.30 |
+| Acute lymphoid leukaemia    |       0.33 |
+|  Colon/rectum cancer   |       0.33 |
+|   Uterine cancer  |       0.33 |
+|  IHD   |        0.34|
+|  Asthma   |       0.36 |
+|  Stroke   |        0.36|
+|   Diabetes  |        0.37|
+
+### Data distribution.
+UHC score distribution across countries: Below graph shows fourteen UHC indicators value across the 32 PAHO region countries. It shows that most of countries have LRI, TB, and breat cancer as first three high scored UHC indicator. Among these three countries, rank of countries changes but stays reletively persistant as in order that is shown in the graph. High score in UHC indicator means high case-fatality in that specific country at year 2020. However, this insight itself cannot clarify what area of UHC indicators contributed to explain high/low impact by COVID19 excess death. Therefore, k-nearest neighbor model classifies the dataset for this analysis. 
+![download (6)](https://user-images.githubusercontent.com/81782228/125655094-ae42000d-d6c0-443c-b165-6d0c119d4f39.png)
 
 
 ### Model 
-KNN model computes relation to all indicators in the model and return unsupervised classification result of those indicator's as in format of clusters. In the analysis, the ML model computes distance of each possible combinations of UHC indicators and identify hidden patterns of class. Further details of model validation and result follows as below:
-#### Cluster size 
-Get SSE to check optimal cluster size
+K-nearesrt neighbor model computes relation of all indicators in the dataset and returns its classes based on similarity. The result of the analysis is in format of clusters which is driven thru unsupervised classification effort by machine, therefore, free of human biases or perception to draw the result. In this analysis, the K-nearest neighbor model computes distance of each data points and its possible combinations of UHC indicators and identify hidden patterns of its distribution. Further details of model validation and result follows as below:
+
+#### Model validation 1.Cluster size 
+K-nearest neighbor model with different cluster sizes were tested. For this validation, total of fourteen models were tested with two to fifteen centroids set as a seed of the cluster. Based on sum of square error (SSE) value among clusters sized from 2 to 15, the optimal size of cluster can be decised either 2 or 3 as shown in the below graph. The graph shows sudden kinked line when centroid is set as 2 or 3. For more detailed view, its difference of SSE was computed and the biggest difference among all tested intervals were also shown between when centroid is set as 2 or 3.
+
 ![sse](https://user-images.githubusercontent.com/81782228/125120152-eec4cd00-e0a6-11eb-90bc-908c2e4c51ca.png)
+| Centroids | Difference between SSE  (%)|
+| -- | ------ | 
+| 2  | -41    | 
+| 3  | -18    |
+| 4  |-19     |
+| 5  |  -8    |
+| 6  | -10    |
+| 7  |  -12   |
+| 8  |   -13  |
+| 9  |   -12  |
+| 10 |    -9  |
+| 11 |    -4  |
+| 12 |   -15  |
+| 13  |    -5 |
+| 14  |  -15  |
+| 15  |   -   |
 
-Based on SSE check among clusters sized from 2 to 15, the optimal size of cluster is either 2 or 3 with its delta ibiggest among all tested intervals. The pattern is also observed in the above graph with kinked point at where k=2 and k=3.
 
 
-#### Number of countries in each clusters 
+
+#### Model validation 2. Number of countries in each clusters 
+As in process to further validation of the cluster sanity, balance between clusters have checked. Balance between the cluster means how many of samples allocated in each clusters. Ideal case for the cluster is each class contains similar size of samples, such as 50% if k=2 case and 33% on k=3 case. In our dataset, when the model built a model with 2 clusters, its balabce was 72% (23 countries out of total of 32 countries) and 28% (9 countries/32 countries, where the majority of case were allocated in a single cluster. Next model was built on k=3 scenario, where all countries are distributed into three clusters with balance of 28%, 25%, and 47%. However, final decision on cluster size for the analysis should be decided by how the target index is distributed per cluster on top of the number of countries per clusters. Therefore, the analysis will be done for both k=3 and k=2 scenario. A model with four clusters is check for further accuracy, however, as shown in the graph, one of the cluster contains less than 5% of data, therefore, it will not considered further. 
+
 
 ![graph4](https://user-images.githubusercontent.com/81782228/125120282-174cc700-e0a7-11eb-85db-a4ae125a607f.png)
 ![graph4-1](https://user-images.githubusercontent.com/81782228/125120315-26cc1000-e0a7-11eb-8825-145392bc64f2.png)
 ![graph4-2](https://user-images.githubusercontent.com/81782228/125120327-292e6a00-e0a7-11eb-8075-c7cd983961e7.png)
 
-As in process to further validation of the cluster sanity, balance between clusters have checked. Balance between the cluster means how many number of samples allocated in each clusters. When the ML model built a model with 2 clusters, its balabce was xx% and xx% where the majority of case (xx%) were allocated in single cluster. Next ML model was built on k=3 scenario, where all countries are distributed into three clusters with balance of xx%, xx%, and 20%. However, final decision on what # of clusters to use for the analysis should be decided by how the target index is distributed per cluster. Therefore, the analysis will be done for both k=3 and k=2 scenario.
-
-In case with 4 cluster is check for further accuracy, however, as shown in the graph, all clusters similarly distributed between xx% to xx%.
 
 
-#### Define KNN model and test scenarios of K=2 and K=3
+#### Model validation 3. Distribution of indicators between 2 models (K=2 vs K=3)
 
 ##### UHC coverage index mean value per cluster
+Since the model computes similarity of data as in distance based method, data should be standardized. Therefore, excess death rate data is standardized into 10 buckets of countries, sorted and ranked for its distance based analysis. 
+When model is built by two centroids, it returns two clusters with first cluster includes countries with its excess death rate score 3.7 and 6.6 in second cluster. Which shows, two clusters that is driven based on UHC similarity can be classed into a group with high (>=6.6) mean score of excess death compare to a group with low (<=3.7) mean score of excess death score with clear division between the clusters. However, the model with three clusters, returns three clusters with each cluster has mean of the class as 4.2, 7.1 and 3.2. However, the separation between first and thrid cluster with its mean as 4.2 and 3.2 can be not as clear as the previous model with two clusters and might have an overlap between clusters. Therefore, addition to it, each indicators mean value should be checked per cluster. 
 
-| Cluster label      | Mean COVID19 impact as in excess death ratio (K=2) |Mean COVID19 impact as in excess death ratio (K=3) |
+| Cluster label | Mean COVID19 impact as in excess death ratio (K=2) |Mean COVID19 impact as in excess death ratio (K=3) |
 | ----------- | ----------- | ----------- |
-| 0      | 3.7      | 4.2|
-| 1   | 6.6        |7.1 |
-| 2   |-        |3.2|
+| 0      | 3.7   (low impact)   | 4.2 (mid impact)|
+| 1   | 6.6     (high impact)   |7.1 (high impact)|
+| 2   |-        |3.2 (low impact)|
 
 
-##### UHC indicator mean per cluster 
+##### Model calidation 4. Each UHC indicators mean per cluster 
 
-| Cluster label      | Cluster 0 | Cluster 1 |Cluster 2 |
+|     | Cluster 0 (Low impact group) | Cluster 1 (High impact) |
+| ----------- | ----------- | ----------- |
+|ART							|64.8	|77.0|
+|Acute lymphoid leukaemia	|15.3	|48.0|
+|Asthma						|60.4	|76.9|
+|Breast cancer				|66.4	|85.2|
+|CKD						|	20.3|	50.4|
+|COPD						|60.8	|77.4|
+|Cervical cancer			|	53.2|	76.1|
+|Colon/rectum cancer		|	52.2|	79.6|
+|Diabetes					|37.9	|72.9}
+|IHD						|	58.9|	82.5|
+|LRI						|	88.6|	96.2|
+|Stroke						|52.8	|80.8|
+|TB							|75.2	|86.4|
+|Uterine cancer				|61.1	|84.9|
+
+
+|     | Cluster 0 (Mid impact)| Cluster 1 (High impact) |Cluster 2 (Low impact) |
 | ----------- | ----------- | ----------- |----------- |	
 |ART	|63.2	|78.4|	65.8|
 |Acute lymphoid leukaemia	|8.8	|49.3	|20.7|
@@ -243,24 +296,8 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 
 
 
-
-| Cluster label      | Cluster 0 | Cluster 1 |
-| ----------- | ----------- | ----------- |
-|ART							|64.8	|77.0|
-|Acute lymphoid leukaemia	|15.3	|48.0|
-|Asthma						|60.4	|76.9|
-|Breast cancer				|66.4	|85.2|
-|CKD						|	20.3|	50.4|
-|COPD						|60.8	|77.4|
-|Cervical cancer			|	53.2|	76.1|
-|Colon/rectum cancer		|	52.2|	79.6|
-|Diabetes					|37.9	|72.9}
-|IHD						|	58.9|	82.5|
-|LRI						|	88.6|	96.2|
-|Stroke						|52.8	|80.8|
-|TB							|75.2	|86.4|
-|Uterine cancer				|61.1	|84.9|
-
+##### Model calidation 6. Distribution of countries in each clusters
+When model is built with two clusters, it returns two classes with high/low impacted by excess death score. First cluster has its mean score on 6.6 and includes 9 countries. Out of that, four countries (44%) with highly impacted by COVID19 as it can be seen on excess death scpre above eight. Two countries are between 8-6, 1 country in 5, two countries in range of 2-4. A class with lower average excess death score includes countries rather similar proportion (~13%) across 10 groups, however bottom score bucket with range 0-1 includes four countries out of 23 countries (17%). Further detail of countries in each class can be found in the below table.
 
 ![download](https://user-images.githubusercontent.com/81782228/125497587-bd77dcdd-50ec-4783-8faa-6a113502ef60.png)
 
@@ -276,6 +313,9 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 |2							| 	Costa Rica, Uruguay|   Saint Vincent and the Grenadines|
 |1							| 	|   Bahamas, Trinidad and Tobago, Antigua and Barbuda|
 |0							| 	|   Grenada, Barbados, Saint Lucia, Suriname|
+
+
+When model is built with three clusters, it returns three classes with high/mid/low impacted by excess death score. It can be compared with the above model and it is shown that most of countries from two cluster model's highly impacted group is repeated on the three cluster model's highly impacted group. Mid/low impacted group is shown as a split of low impacted group from the two cluster model. Further detail of countries in each class can be found in the below table.
 
 ![download (2)](https://user-images.githubusercontent.com/81782228/125497901-780b24d4-bb06-407a-8137-75329ec81649.png)
 
@@ -293,25 +333,55 @@ In case with 4 cluster is check for further accuracy, however, as shown in the g
 |0							| 	                |   Suriname                            |  Barbados, Grenada, Saint Lucia|
 
 
-Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
+
+
 ## Result
-### UHC score distribution across countries
-![download (6)](https://user-images.githubusercontent.com/81782228/125655094-ae42000d-d6c0-443c-b165-6d0c119d4f39.png)
-
-Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
-
 ### Pattern of UHC scores impact on high/low COVID19 impact 
+The model classified nine countries within PAHO regions as a group of countries that is highly impacted by COVID19, which is measured by excess death. The order of high case-fetality(average) across this group's countries are as below : 
+- LRI
+- TB
+- Breast cancer
+- Uterine cancer
+- IHD
+- Stroke
+- Colon/retum cancer
+- COPD
+- ART
+- Asthma
+- Cervical cancer
+- Diabetes
+- CKD
+- Acute lymphoid leaukemia 
+
+In term of the country wise comparison, Canada and USA was top ranked in its highly-impacted countries. These two countries also have high case-fatality (expressed in dark navy color cube) by different types of cancers and stroke, unlike other countries where most of countries in this group shows reletively low case-fetality (expressed in light blue color cube) by other UHC indicator area than the LRI and TB. However, it requies attention to interpret this outcome, that health surveilance and data quality can be different between countries and diagnosis sensitivity can be different between countries. 
+
 ![highimpactedcountries_heatmap](https://user-images.githubusercontent.com/81782228/125704178-593dddd6-12c8-4d10-a12a-bf2953be5745.png)
+
+The model classified twenty-three countries within PAHO regions as a group of countries that is less impacted by COVID19, which is measured by excess death. The order of high case-fetality(average) across this group's countries are as below : 
+- LRI
+- TB
+- Breast cancer
+- ART 
+- Uterine cancer 
+- COPD 
+- Asthma 
+- IHD
+- Cervical cancer
+- Stroke
+- Colon/retum cancer
+- Diabetes
+- CKD
+- Acute lymphoid leaukemia 
+
+As graph shows, the order of top three high case-fetality UHC indicator areas and bottom three high case-fetality UHC indicator areas are same, however with different intensity. This shows, that those seven UHC indicator areas have similar pattern across all PAHO region countries but with less of intensity among the countries with less of COVDI19 excess death. Also, in this group of countries does not show persistantly high case-fetality among certain UHC indicator areas. 
+
 ![lessimpactedcountries_heatmap](https://user-images.githubusercontent.com/81782228/125704202-74580836-2ca8-4417-9868-ef026878c563.png)
 
-
-
-Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
-
-
+Below box graph shows distribution of each UHC indicators across country within each clusters. This box graph is ordered in ascending order of mean value on UHC indicator average within the highly impacted countries. It allows comparison between two classes on its case-fetality. Both clusters have same order of case-fetality among first three and last three indicators. However, you can compare eight UHC indicator areas that are acting differently between the clusters. Amongh less impacted countries, uterine cancer and asthma case-fetality was higher than highly impacted countries and ART, COPD, and cervical cancer shows higher case-fetality. 
 ![download (5)](https://user-images.githubusercontent.com/81782228/125322782-be2d9f00-e303-11eb-8dc8-ed8b35398e0f.png)
 
-Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here. Graph description goes here.
+
+
 
 ## Conclusion 
 Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. 
