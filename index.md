@@ -214,7 +214,7 @@ K-nearesrt neighbor model computes relation of all indicators in the dataset and
 K-nearest neighbor model with different cluster sizes were tested. For this validation, total of fourteen models were tested with two to fifteen centroids set as a seed of the cluster. Based on sum of square error (SSE) value among clusters sized from 2 to 15, the optimal size of cluster can be decised either 2 or 3 as shown in the below graph. The graph shows sudden kinked line when centroid is set as 2 or 3. For more detailed view, its difference of SSE was computed and the biggest difference among all tested intervals were also shown between when centroid is set as 2 or 3.
 
 ![sse](https://user-images.githubusercontent.com/81782228/125120152-eec4cd00-e0a6-11eb-90bc-908c2e4c51ca.png)
-| Centroids | Difference between SSE  (%)|
+| Centroids | Difference between SSE  (%) |
 | -- | ------ | 
 | 2  | -41    | 
 | 3  | -18    |
