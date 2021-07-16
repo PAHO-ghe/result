@@ -28,11 +28,11 @@ Coverage of the LRI indicator is calculated using a mortality-incidence ratio (w
 The ART indicator uses crude coverage of ART among people living with HIV. So a score of 80 in a given country-year means that we estimate that 80% of people living with HIV are on ART in that country-year. There are four indicators in the index that use crude coverage for the coverage component (both of the vaccine coverage indicators, ART coverage, and met demand for family planning).
 
 The LRI coverage score can be compared across countries, but not across indicators within a given country, since the LRI coverage scores are scaled across countries. So we can compare Mexico’s LRI coverage score to Peru’s LRI coverage score, but we cannot compare LRI and ART treatment within Mexico.
-Further details to explain the indicators can be found from Part 2, Section 2 of the reference paper [lancet paper link](https://www.thelancet.com/cms/10.1016/S0140-6736(20)30750-9/attachment/7b01f380-587a-49d3-aae2-b6ea93898367/mmc1.pdf)
+Further details to explain the indicators can be found from Part 2, Section 2 of the reference paper [paper link](https://www.thelancet.com/cms/10.1016/S0140-6736(20)30750-9/attachment/7b01f380-587a-49d3-aae2-b6ea93898367/mmc1.pdf)
 
 ### ICD 10 codes on UHC indicators
- The ICD codes is pulled from IHME’s Global Health Data Exchange (http://ghdx.healthdata.org/record/ihme-data/gbd-2019-cause-icd-code-mappings) and refer to ICD codes used for the different causes of death and disability for the GBD 2019 study. Below table lists the ICD codes associated with all of the different causes of death and disability included in the UHC effective coverage index and therefore the ICD codes associated with each indicator.
- For each indicator, there are two components, 1) the coverage and 2) the weight. Taking the ART coverage indicator as an example, the coverage is crude coverage of ART among people living with HIV and the weight is the total potential health gain of the ART coverage intervention in each country-year. One of the inputs to the weight is the disability adjusted life-years due to HIV/AIDS. GBD 2019 estimates are the inputs to the UHC effective coverage index. Full description of index : [lancet2 paper link](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30750-9/fulltext)
+ The ICD codes is pulled from IHME’s Global Health Data Exchange [IHME data exchange](http://ghdx.healthdata.org/record/ihme-data/gbd-2019-cause-icd-code-mappings) and refer to ICD codes used for the different causes of death and disability for the GBD 2019 study. Below table lists the ICD codes associated with all of the different causes of death and disability included in the UHC effective coverage index and therefore the ICD codes associated with each indicator.
+ For each indicator, there are two components, 1) the coverage and 2) the weight. Taking the ART coverage indicator as an example, the coverage is crude coverage of ART among people living with HIV and the weight is the total potential health gain of the ART coverage intervention in each country-year. One of the inputs to the weight is the disability adjusted life-years due to HIV/AIDS. GBD 2019 estimates are the inputs to the UHC effective coverage index. Full description of index : [paper link](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30750-9/fulltext)
 
 
 |	UHC ECI indicator					|	ICD10	|
@@ -214,8 +214,8 @@ K-nearesrt neighbor model computes relation of all indicators in the dataset and
 K-nearest neighbor model with different cluster sizes were tested. For this validation, total of fourteen models were tested with two to fifteen centroids set as a seed of the cluster. Based on sum of square error (SSE) value among clusters sized from 2 to 15, the optimal size of cluster can be decised either 2 or 3 as shown in the below graph. The graph shows sudden kinked line when centroid is set as 2 or 3. For more detailed view, its difference of SSE was computed and the biggest difference among all tested intervals were also shown between when centroid is set as 2 or 3.
 
 ![sse](https://user-images.githubusercontent.com/81782228/125120152-eec4cd00-e0a6-11eb-90bc-908c2e4c51ca.png)
-| Centroids | Difference between SSE  (%) |
-| -- | ------ | 
+| Centroids | Difference between SSE (%) |
+| ----- | ----- | 
 | 2  | -41    | 
 | 3  | -18    |
 | 4  |-19     |
@@ -227,9 +227,9 @@ K-nearest neighbor model with different cluster sizes were tested. For this vali
 | 10 |    -9  |
 | 11 |    -4  |
 | 12 |   -15  |
-| 13  |    -5 |
-| 14  |  -15  |
-| 15  |   -   |
+| 13 |    -5  |
+| 14 |  -15   |
+| 15 |   -    |
 
 
 
@@ -380,7 +380,7 @@ As graph shows, the order of top three high case-fetality UHC indicator areas an
 Below box graph shows distribution of each UHC indicators across country within each clusters. This box graph is ordered in ascending order of mean value on UHC indicator average within the highly impacted countries. It allows comparison between two classes on its case-fetality. Both clusters have same order of case-fetality among first three and last three indicators. However, you can compare eight UHC indicator areas that are acting differently between the clusters. Amongh less impacted countries, uterine cancer and asthma case-fetality was higher than highly impacted countries and ART, COPD, and cervical cancer shows higher case-fetality. 
 ![download (5)](https://user-images.githubusercontent.com/81782228/125322782-be2d9f00-e303-11eb-8dc8-ed8b35398e0f.png)
 
-
+{% include example.html %}
 
 
 ## Conclusion 
@@ -398,5 +398,7 @@ Conclusion message goes here. Conclusion message goes here. Conclusion message g
 
 
 ###### housekeeping matters
-[editor on GitHub](https://github.com/PAHO-ghe/result/edit/gh-pages/index.md) layout and styles from the Jekyll theme  [repository settings](https://github.com/PAHO-ghe/result/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+[editor on GitHub](https://github.com/PAHO-ghe/result/edit/gh-pages/index.md) 
+[repository settings](https://github.com/PAHO-ghe/result/settings/pages)  
+`_config.yml` 
 
