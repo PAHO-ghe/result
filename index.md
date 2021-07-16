@@ -9,17 +9,17 @@ Impact of COVID19 is measured in the Americas. Impact is expressed in the size o
 In the study, focus of impact measure is categorized as below fourteen areas, which is among the UHC indicators developed by IHME.
 - Acute lymphoid leukemia treatment
 - Asthma treatment
-- Art coverage (Other immunosuppresive conditions such as HIV)
+- Art coverage (Other immunosuppressive conditions such as HIV)
 - Breast cancer treatment
 - COPD treatment
 - Colon/Rectum cancer treatment
 - Cervical cancer treatment
 - Diabetes treatment
-- IHD treatmentt
+- IHD treatment
 - LRI treatment
 - Stroke treatment
 - TB treatment
-- Utherine cancer treatment
+- Uterine cancer treatment
 
 
 Each of UHC indicators can be interpreted in the following example: 
@@ -203,7 +203,7 @@ corr_out.sort_values(by=targetoutput)
 |  Stroke   |        0.36|
 |   Diabetes  |        0.37|
 
-### Data distribution.
+### Data distribution
 UHC score distribution across countries: Below graph shows fourteen UHC indicators value across the 32 PAHO region countries. It shows that most countries have LRI, TB, and breast cancer as the first three high scored UHC indicators. Among these three countries, the rank of countries changes but stays relatively persistent as in the order that is shown in the graph. High score in UHC indicator means high case-fatality in that specific country at year 2020. However, this insight itself cannot clarify what area of UHC indicators contributed to explain high/low impact by COVID19 excess death. Therefore, k-nearest neighbor model classifies the dataset for this analysis. 
 ![download (6)](https://user-images.githubusercontent.com/81782228/125655094-ae42000d-d6c0-443c-b165-6d0c119d4f39.png)
 
@@ -234,7 +234,7 @@ K-nearest neighbor models with different cluster sizes were tested. For this val
 | 15 |   -    |
 
 
-#### Model validation 2. Number of countries in each clusters 
+#### Model validation 2. Number of countries in each cluster
 As in process to further validation of the cluster sanity, balance between clusters have been checked. Balance between the clusters means how many samples are allocated in each cluster. Ideal case for the cluster is each class containing a similar size of samples, such as 50% if k=2 case and 33% on k=3 case. In our dataset, when the model built a model with 2 clusters, its balance was 72% (23 countries out of a total of 32 countries) and 28% (9 countries/32 countries, where the majority of cases were allocated in a single cluster. Next model was built on k=3 scenario, where all countries are distributed into three clusters with a balance of 28%, 25%, and 47%. However, the final decision on cluster size for the analysis should be decided by how the target index is distributed per cluster on top of the number of countries per cluster. Therefore, the analysis will be done for both k=3 and k=2 scenarios. A model with four clusters is checked for further accuracy, however, as shown in the graph, one of the clusters contains less than 5% of data, therefore, it will not be considered further. 
 
 ![graph4](https://user-images.githubusercontent.com/81782228/125120282-174cc700-e0a7-11eb-85db-a4ae125a607f.png)
@@ -246,7 +246,7 @@ As in process to further validation of the cluster sanity, balance between clust
 #### Model validation 3. Distribution of indicators between two models (K=2 vs K=3)
 
 ##### Mean COVID19 impact mean value per cluster
-Since the model computes similarity of data as in distance based method, data should be standardized. Therefore, excess death rate data is standardized into 10 buckets of countries, sorted and ranked for its distance based analysis.
+Since the model computes similarity of data as in distance-based method, data should be standardized. Therefore, excess death rate data is standardized into 10 buckets of countries, sorted, and ranked for its distance-based analysis.
 When the model is built by two centroids, it returns two clusters with the first cluster including countries with an excess death rate score 3.7 and 6.6 in the second cluster. Which shows, two clusters that are driven based on UHC similarity can be classed into a group with high (>=6.6) mean score of excess death compared to a group with low (<=3.7) mean score of excess death with clear division between the clusters. However, the model with three clusters, returns three clusters with each cluster having mean of the class as 4.2, 7.1 and 3.2. However, the separation between the first and third cluster with its mean as 4.2 and 3.2 can be not as clear as the previous model with two clusters and might have an overlap between clusters. Therefore, in addition to it, each indicator's mean value should be checked per cluster. 
 
 | Cluster label | Mean COVID19 impact as in excess death ratio (K=2) |Mean COVID19 impact as in excess death ratio (K=3) |
@@ -256,7 +256,7 @@ When the model is built by two centroids, it returns two clusters with the first
 | 2   |-        |3.2 (low impact)|
 
 
-#### Model calidation 4. UHC indicators mean per cluster 
+#### Model validation 4. UHC indicators mean per cluster 
 
 |     | Cluster 0 (Low impact group) | Cluster 1 (High impact) |
 | ----------- | ----------- | ----------- |
@@ -295,8 +295,9 @@ When the model is built by two centroids, it returns two clusters with the first
 
 
 
-#### Model calidation 6. Distribution of countries in each clusters
-When model is built with two clusters, it returns two classes with high/low impacted by excess death score. First cluster has its mean score on 6.6 and includes 9 countries. Out of that, four countries (44%) with highly impacted by COVID19 as it can be seen on excess death scpre above eight. Two countries are between 8-6, 1 country in 5, two countries in range of 2-4. A class with lower average excess death score includes countries with a rather similar proportion (~13%) across 10 groups, however the bottom score bucket with range 0-1 includes four countries out of 23 countries (17%). Further detail of countries in each class can be found in the below table.
+#### Model validation 5. Distribution of countries per clusters
+When model is built with two clusters, it returns two classes with high/low impacted by excess death score. First cluster has its mean score on 6.6 and includes 9 countries. Out of that, four countries (44%) with highly impacted by COVID19 as it can be seen on excess death score above eight. Two countries are between 8-6, 1 country in 5, two countries in range of 2-4. A class with lower average excess death score includes countries with a rather similar proportion (~13%) across 10 groups, however the bottom score bucket with range 0-1 includes four countries out of 23 countries (17%). Further detail of countries in each class can be found in the below table.
+
 
 ![download](https://user-images.githubusercontent.com/81782228/125497587-bd77dcdd-50ec-4783-8faa-6a113502ef60.png)
 
@@ -343,16 +344,16 @@ The model classified nine countries within PAHO regions as a group of countries 
 - Uterine cancer
 - IHD
 - Stroke
-- Colon/retum cancer
+- Colon/rectum cancer
 - COPD
 - ART
 - Asthma
 - Cervical cancer
 - Diabetes
 - CKD
-- Acute lymphoid leaukemia 
+- Acute lymphoid leukemia 
 
-In terms of the country wise comparison, Canada and USA were top ranked in its highly-impacted countries. These two countries also have high case-fatality (expressed in dark navy color cube) by different types of cancers and stroke, unlike other countries where most of countries in this group shows relatively low case-fatality (expressed in light blue color cube) by other UHC indicator area than the LRI and TB. However, it requires attention to interpret this outcome, that health surveillance and data quality can be different between countries and diagnosis sensitivity can be different between countries. 
+In terms of the country wise comparison, Canada and USA were top ranked in its highly impacted countries. These two countries also have high case-fatality (expressed in dark navy color cube) by different types of cancers and stroke, unlike other countries where most of countries in this group shows relatively low case-fatality (expressed in light blue color cube) by other UHC indicator area than the LRI and TB. However, it requires attention to interpret this outcome, that health surveillance and data quality can be different between countries and diagnosis sensitivity can be different between countries. 
 
 ![highimpactedcountries_heatmap](https://user-images.githubusercontent.com/81782228/125704178-593dddd6-12c8-4d10-a12a-bf2953be5745.png)
 
@@ -367,10 +368,10 @@ The model classified twenty-three countries within PAHO regions as a group of co
 - IHD
 - Cervical cancer
 - Stroke
-- Colon/retum cancer
+- Colon/rectum cancer
 - Diabetes
 - CKD
-- Acute lymphoid leaukemia 
+- Acute lymphoid leukemia 
 
 As the graph shows, the order of top three high case-fatality UHC indicator areas and bottom three high case-fatality UHC indicator areas are the same, however with different intensity. This shows that those seven UHC indicator areas have a similar pattern across all PAHO region countries but with less of intensity among the countries with less of COVDI19 excess death. Also, this group of countries does not show persistently high case-fatality among certain UHC indicator areas. 
 
