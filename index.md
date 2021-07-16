@@ -307,7 +307,7 @@ When model is built with two clusters, it returns two classes with high/low impa
 |8							| 	|   Argentina, Bolivia (Plurinational state of), Ecuador|
 |7							| 	Canada, Colombia|   Brazil|
 |6							| 	|   Paraguary, Belize, Honduras|
-|5							| 	Cuba, |   Nicaragua, Domunical Republic|
+|5							| 	Cuba, |   Nicaragua, Domunican Republic|
 |4							| 	|   Guyana, Haiti, Venezuela (Bolivarian Republic of)|
 |3							| 	|  Guatemala, Jamaica, Mexico |
 |2							| 	Costa Rica, Uruguay|   Saint Vincent and the Grenadines|
@@ -380,13 +380,13 @@ As graph shows, the order of top three high case-fetality UHC indicator areas an
 Below box graph shows distribution of each UHC indicators across country within each clusters. This box graph is ordered in ascending order of mean value on UHC indicator average within the highly impacted countries. It allows comparison between two classes on its case-fetality. Both clusters have same order of case-fetality among first three and last three indicators. However, you can compare eight UHC indicator areas that are acting differently between the clusters. Amongh less impacted countries, uterine cancer and asthma case-fetality was higher than highly impacted countries and ART, COPD, and cervical cancer shows higher case-fetality. 
 ![download (5)](https://user-images.githubusercontent.com/81782228/125322782-be2d9f00-e303-11eb-8dc8-ed8b35398e0f.png)
 
-{% include example.html %}
-
 
 ## Conclusion 
-Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. Conclusion message goes here. 
+COVID-19 impacted countries in PAHO region differently. Two group of countries been identified that are highly impacted or less impacted, which is measured in excess death by COVDID-19. Nice countires with high COVID-19 impact includes two countries in the north America. And those countries with highly impacted by COVID-19 showed higher case-fetality in all UHC indicator areas. Particulary, countries with higher impact by COVID-19 showed higher burden of uterine cancer, IHD, and stroke in the year before the pandemic compare to less impacted countries, excluding LRI, TB, and breast cancer burden, which was similar pattern as the less impacted countries. 
 
+This finding shows COVID19 impact was higher when countries already carried burden of case-fetality of LRI, TB, and breast cancer across all PAHO region countries. It is supported by the result that shows, countries with lower case-fetality of these three areas of UHC indicator had lower excess death score due to COVID19. Therefore, lowering LRI, TB, and breast cancer case-fetality can lead less impact from COVID-19 like pandemic. 
 
+Lastly, noteworth point of this machine learning study shows that there are countries with strong similarity of health system performance that explains higher impact by COVID-19.
 
 
 
